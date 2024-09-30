@@ -1,5 +1,5 @@
 # PBO5
-Penugasan matakuliah pemrograman berorientasi obyek pertemuan kelima yakni membuat CRUD yang mengimplementasikan JFrame Form dari Java dengan contoh [CRUD](https://github.com/UmarAziz01/PBO4) kemarin.
+Penugasan matakuliah pemrograman berorientasi obyek pertemuan kelima yakni membuat CRUD Swing Java yang mengimplementasikan JFrame Form dari Java dengan contoh [CRUD](https://github.com/UmarAziz01/PBO4) kemarin.
 
 
 # Langkah Pertama  
@@ -23,6 +23,7 @@ UmurMahasiswa INT NOT NULL,
 CONSTRAINT CK_Umur CHECK (UmurMahasiswa >= 16),
 CONSTRAINT CK_Kelamin CHECK(KelaminMahasiswa IN ('L', 'P'))
 );
+```
 
 # Langkah Ke 3
 **Membuat Class Mahasiswa** Kelas ini diguanakan sebagai representasi dari entitas mahasiswa yang memiliki atribut-atribut umum, seperti NIM, nama, jenis kelamin, dan umur. Kelas ini juga dilengkapi dengan getter dan setter untuk memanipulasi database
@@ -74,7 +75,7 @@ public class Mahasiswa {
         this.UmurMahasiswa = UmurMahasiswa;
     }
 }
-```
+````
 
 # Langkah Ke 4
 **Membuat class CRUDKu** yang digunakan untuk mengelola operasi database menggunakan JDBC (Java Database Connectivity). Kelas ini berinteraksi dengan database PostgreSQL untuk menjalankan operasi CRUD (Create, Read, Update, Delete) pada tabel Mahasiswa
@@ -223,7 +224,7 @@ public class CRUDKu {
         }
     }
 }
-````
+````java
 # Langkah Ke 5
 **Membuat JFrame Form - CRUDForm** yang digunakan untuk mendesain tampilan untuk program sesuai dengan menu ataupun method yang telah dideskripsikan sebelumnya
 
